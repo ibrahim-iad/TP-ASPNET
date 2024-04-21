@@ -1,0 +1,28 @@
+﻿@model List<TP1ASP.Models.LigneTableau>
+@{
+    ViewBag.Title = "Table3";
+}
+
+<h2>Table de multiplication</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Indice</th>
+            <th>Résultat</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var obj in Model)
+        {
+        <tr>
+            <td>@obj.nombre</td>
+            <td>@obj.indice</td>
+            <td>@obj.resultat</td>
+        </tr>
+        }
+
+    </tbody>
+</table>

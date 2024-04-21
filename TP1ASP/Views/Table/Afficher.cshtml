@@ -1,0 +1,14 @@
+﻿@model IEnumerable<TP1ASP.Models.LigneTableau>
+
+@{
+    ViewBag.Title = "Afficher";
+}
+
+<h2>Table de multiplication</h2>
+
+@foreach (var obj in Model)
+{
+    <li>@obj.nombre * @obj.indice = @obj.resultat </li>
+}
+
+@Html.ActionLink("Nouvelle table ?", "Index")

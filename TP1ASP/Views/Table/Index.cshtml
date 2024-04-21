@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Formulaire</h2>
+@using (Html.BeginForm("Afficher", "Table", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label for="nombre" class="control-label">Entrez votre nombre :</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" required/>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Soumettre</button>
+}

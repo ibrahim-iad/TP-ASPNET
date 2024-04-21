@@ -1,0 +1,26 @@
+﻿@model TP1ASP.Models.Rectangle
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Compléter le formulaire</h2>
+
+@using (Html.BeginForm("Calculer", "Rectangle", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Longueur, htmlAttributes: new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.Longueur, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Longueur, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Largeur, htmlAttributes: new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.Largeur, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Largeur, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Soumettre</button>
+}

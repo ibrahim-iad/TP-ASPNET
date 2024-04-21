@@ -1,0 +1,14 @@
+﻿@model TP1ASP.Models.Rectangle
+
+@{
+    ViewBag.Title = "Calculer";
+}
+
+<h2>Calcul sur un rectangle</h2>
+
+<li>Longueur: @Model.Longueur</li>
+<li>Largeur: @Model.Largeur</li>
+<li>Périmètre: @Model.Perimetre</li>
+<li>Surface: @Model.Surface</li>
+
+@Html.ActionLink("Nouveau Rectangle ?", "Index")
